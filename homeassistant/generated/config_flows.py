@@ -271,6 +271,7 @@ FLOWS = [
     "xiaomi_aqara",
     "xiaomi_miio",
     "yeelight",
+    "youless",
     "zerproc",
     "zha",
     "zwave",
