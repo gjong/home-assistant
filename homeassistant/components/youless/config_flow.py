@@ -30,7 +30,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 await self.hass.async_add_executor_job(api.initialize)
 
                 device_id = config_entries.uuid_util.random_uuid_hex()
-                if api.mac_address is not None:
+                if api.mac_address is not None and isinstance(api.mac_address, str):
                     device_id = api.mac_address
 
                 return self.async_create_entry(
